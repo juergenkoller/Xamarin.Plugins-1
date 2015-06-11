@@ -111,6 +111,14 @@ namespace Lotz.Xam.Messaging
         /// </summary>
         public string Subject { get; set; }
 
+        /// <summary>
+        ///     Use the Windows Store DataTransferManager for sending emails
+        /// </summary>
+        /// <remarks>
+        ///     Has no effect on other platforms
+        /// </remarks>
+        public bool UseDataTransferManager { get; set; }
+
         #endregion
     }
 }

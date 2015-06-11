@@ -130,6 +130,21 @@ namespace Lotz.Xam.Messaging
             return this;
         }
 
+#if WINDOWS_APP
+
+        public EmailMessageBuilder BodyAsDataTransferManager(string htmlBody)
+        {
+            if (!string.IsNullOrEmpty(htmlBody))
+            {                
+                _email.Message = htmlBody;
+                _email.UseDataTransferManager = true;
+            }
+
+            return this;
+        }
+
+#endif
+        
         #endregion
     }
 }
